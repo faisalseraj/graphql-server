@@ -1,0 +1,12 @@
+
+type Author {
+  name: String
+  phone: String
+  id: ID!
+}
+
+type Query {
+  authors: [Author]
+  authorById(id: ID!): Author
+}
+

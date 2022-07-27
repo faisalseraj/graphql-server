@@ -1,0 +1,22 @@
+type User {
+  name: String
+  phone: String
+  password: String!
+  id: ID!
+}
+type LoginResponse {
+  user: User
+  accessToken: String!
+}
+
+type Query {
+  users: [User]
+  userById(id: ID!): User!
+}
+
+type Mutation {
+  login(phone: String!, password: String!): LoginResponse!
+  createUser(name: String!, phone: String!,password: String!): User!
+}
+
+
